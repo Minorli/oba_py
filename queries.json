@@ -1,0 +1,38 @@
+{
+  "1": {
+    "title": "查看所有 OBServer 节点",
+    "type": "simple",
+    "sql": "SELECT * FROM oceanbase.dba_ob_servers;"
+  },
+  "2": {
+    "title": "查看所有租户 (Tenants)",
+    "type": "simple",
+    "sql": "SELECT * FROM oceanbase.dba_ob_tenants;"
+  },
+  "3": {
+    "title": "查看集群的 Zone 列表",
+    "type": "simple",
+    "sql": "SELECT * FROM oceanbase.dba_ob_zones;"
+  },
+  "4": {
+    "title": "查看集群合并与轮转 (Major Compaction)",
+    "type": "simple",
+    "sql": "SELECT * FROM oceanbase.gv$ob_cluster_events WHERE event = 'switch_gts_leader' ORDER BY gmt_create DESC LIMIT 10;"
+  },
+  "5": {
+    "title": "查看租户的资源池 (Resource Pools)",
+    "type": "simple",
+    "sql": "SELECT * FROM oceanbase.dba_ob_resource_pools;"
+  },
+  "6": {
+    "title": "查看集群参数 (交互式)",
+    "type": "parameter_query",
+    "sql_template": "SHOW PARAMETERS LIKE '%{query}%';"
+  },
+  "7": {
+    "title": "7th test",
+    "type": "simple",
+    "sql": "select * from gv$ob_units;"
+  }
+}
+
